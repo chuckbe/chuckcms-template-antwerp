@@ -62,6 +62,8 @@ class ChuckcmsTemplateAntwerpTableSeeder extends Seeder
         Template::create([
             'name' => 'ChuckCMS Template Antwerp',
             'slug' => 'chuckcms-template-antwerp',
+            'hintpath' => 'chuckcms-template-antwerp',
+            'path' => 'chuckbe/chuckcms-template-antwerp',
             'type' => 'default',
             'version' => '0.1',
             'author' => 'Karel Brijs (karel@chuck.be)',

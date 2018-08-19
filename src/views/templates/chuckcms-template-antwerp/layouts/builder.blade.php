@@ -3,6 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="ChuckCMS" />
 	@yield('meta')
 	<!-- Stylesheets
 	============================================= -->
@@ -20,7 +21,7 @@
 	@yield('css')
 	<!-- Document Title
 	============================================= -->
-	<title>@yield('title')</title>
+	<title>Antwerp | ChuckCMS</title>
 
 </head>
 
@@ -30,9 +31,7 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
-		@include('chuckcms-template-antwerp::templates.' . $template->slug . '.includes.header')
-			@yield('content')
-		@include('chuckcms-template-antwerp::templates.' . $template->slug . '.includes.footer')
+		@yield('content')
 
 	</div><!-- #wrapper end -->
 
