@@ -2,6 +2,8 @@
 
 namespace Chuckbe\ChuckcmsTemplateAntwerp;
 
+use Chuckbe\ChuckcmsTemplateAntwerp\Commands\PublishAntwerp;
+
 use Illuminate\Support\ServiceProvider;
 
 class ChuckcmsTemplateAntwerpServiceProvider extends ServiceProvider
@@ -14,6 +16,12 @@ class ChuckcmsTemplateAntwerpServiceProvider extends ServiceProvider
     public function boot()
     {   
         $this->loadMigrationsFrom(__DIR__.'/migrations');
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                PublishAntwerp::class,
+            ]);
+        }
         
         //php artisan vendor:publish --tag=chuckcms-template-antwerp-public --force
         $this->publishes([
